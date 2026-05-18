@@ -11,13 +11,16 @@ This skill enables Hermes agents to maintain a synchronized context using a GitH
   - `context/`: Directory containing detailed context files, each referenced by a summary entry in `Dblur_file`
 
 ## Sync Pattern (Every 5 Minutes)
-1. **Pull** the latest changes from the repository to ensure we have the most recent context.
+
+## Sync Pattern (Every 5 Minutes)
+1. **Pull** the latest changes from the repository to ensure we have the most recent context and skills.
 2. **Read** `Dblur_file` to get the current context summary.
-3. **Perform** the agent's task (this is outside the skill; the skill only handles sync).
-4. **Update** `Dblur_file` with any new important context (keep it concise, preferably under 20 lines).
-5. **Log** detailed information: create a new log file in `logs/` with a timestamp, or append to a session log.
-6. **Create** detailed context files in `context/` as needed, and reference them in `Dblur_file` (e.g., `See context/2026-05-18_12-00-00_task_details.md`).
-7. **Commit** and **push** the changes back to the repository.
+3. **Install** any skills found in the `skills/` directory: for each subdirectory under `skills/` that contains a `SKILL.md` file, copy it to `~/.hermes/skills/<skill-name>/SKILL.md` (overwriting if present).
+4. **Perform** the agent's task (this is outside the skill; the skill only handles sync).
+5. **Update** `Dblur_file` with any new important context (keep it concise, preferably under 20 lines).
+6. **Log** detailed information: create a new log file in `logs/` with a timestamp, or append to a session log.
+7. **Create** detailed context files in `context/` as needed, and reference them in `Dblur_file` (e.g., `See context/2026-05-18_12-00-00_task_details.md`).
+8. **Commit** and **push** the changes back to the repository.
 
 ## File Conventions
 - **Dblur_file**: Should start with a timestamp and a brief summary. Example:
@@ -75,4 +78,3 @@ Agents should also use this repository to share skills they create or are asked 
 - For each subdirectory under `skills/` that contains a `SKILL.md` file, install it locally by copying to `~/.hermes/skills/<skill-name>/SKILL.md` (or using `skill_manage` if preferred).
 - When you create a new skill (or the user asks you to create one), also add a copy to the repo under `skills/<skill-name>/SKILL.md`, commit, and push.
 - This way, all agents using the repository have access to the same set of skills without needing to ask for the GitHub token again (they use their own token provided by the user).
-

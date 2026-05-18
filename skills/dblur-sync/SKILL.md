@@ -68,3 +68,11 @@ If the agent is started on a new VPS:
 2. Run the sync pull to get the latest `Dblur_file`.
 3. Read `Dblur_file` to understand the current context.
 4. Proceed with the task, then continue with the regular 5-minute sync cycle.
+
+## Skill Sharing via Repository
+Agents should also use this repository to share skills they create or are asked to create.
+- Upon receiving the repository URL, after pulling, check the `skills/` directory.
+- For each subdirectory under `skills/` that contains a `SKILL.md` file, install it locally by copying to `~/.hermes/skills/<skill-name>/SKILL.md` (or using `skill_manage` if preferred).
+- When you create a new skill (or the user asks you to create one), also add a copy to the repo under `skills/<skill-name>/SKILL.md`, commit, and push.
+- This way, all agents using the repository have access to the same set of skills without needing to ask for the GitHub token again (they use their own token provided by the user).
+

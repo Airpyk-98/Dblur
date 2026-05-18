@@ -1,6 +1,17 @@
 # Dblur Context Summary
-
 Last updated: 2026-05-18 12:00:00 UTC
+
+## Instructions for Agents
+1. Upon receiving this repository URL, clone or pull the latest changes.
+2. Set up git remote with your GitHub token (provided by the user) to allow pushing:
+   git remote set-url origin https://<your-token>@github.com/Airpyk-98/Dblur.git
+3. Check the `skills/` directory for any skill files (SKILL.md). For each, install it locally by copying to ~/.hermes/skills/<skill-name>/SKILL.md or using the skill manage command.
+4. When you create a new skill (or the user asks you to create one), also add a copy to the repo under `skills/<skill-name>/SKILL.md`, commit, and push.
+5. Keep this Dblur_file updated with a concise summary of your current context (under 20 lines).
+6. Log detailed information to files in the `logs/` directory (timestamped).
+7. Create detailed context files in the `context/` directory as needed, and reference them in this Dblur_file.
+8. Perform the sync (pull, update, push) every 5 minutes.
 
 ## Current Context
 - Agent is ready to synchronize.
+- Skills available: see skills/ directory.

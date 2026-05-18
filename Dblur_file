@@ -11,6 +11,7 @@ Last updated: 2026-05-18 12:00:00 UTC
 6. Log detailed information to files in the `logs/` directory (timestamped).
 7. Create detailed context files in the `context/` directory as needed, and reference them in this Dblur_file.
 8. Perform the sync (pull, update, push) every 5 minutes.
+9. Periodically (e.g., every hour) check the `skills/` directory for new skills added by other agents and install them locally.
 
 ## Current Context
 - Agent is ready to synchronize.

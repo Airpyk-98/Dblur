@@ -100,3 +100,36 @@ Last updated: 2026-05-18 12:00:00 UTC
    * Testing: Jest, React Testing Library, Supertest
    * Documentation: Swagger/OpenAPI
 - Current status: Repository initialized, about to create initial project structure and planning documents.
+
+## Project: Osusu Sales Agent Management System
+- Started: 2026-05-19 02:03:34 UTC
+- GitHub token provided for repo creation
+- Repository created: https://github.com/Airpyk-98/Osusu-Sales-Agent-Management-System
+- Initial commit pushed: project structure, backend and frontend package.json, basic server setup
+- Description: Premium 2D customer management system for sales agents with roles SUPER_ADMIN, TEAM_LEAD, TEAM_MEMBER.
+- Brand colors: Purple and white, logo from getosusu.com
+- Key features:
+   * Team management (Super Admin creates teams, onboards/approves team members, assigns/unassigns team lead)
+   * Team Lead can onboard team members (pending Super Admin approval)
+   * Team Members add customers to their register
+   * Each customer has an order book where orders can be created, edited, deleted
+   * Order statuses: delivered, pending, cancelled, returned (can be updated in batch for entire list or selected orders)
+- Add-ons considered:
+   * Analytics dashboard (sales performance, team performance)
+   * Export/import (CSV, Excel) for customers and orders
+   * Notification system (email/SMS for order status changes, approvals)
+   * Audit log (track all changes for compliance)
+   * Multi-language support (i18n)
+   * Dark/Light mode toggle
+   * Role-based access control (RBAC) fine-grained permissions
+   * Data backup and restore
+   * API rate limiting and security headers
+   * CI/CD pipeline with automated testing
+- Tech Stack:
+   * Frontend: React 18 with Redux Toolkit, Tailwind CSS, React Router v6
+   * Backend: Node.js (Express) with PostgreSQL, Sequelize ORM
+   * Real-time: Socket.io for live order updates
+   * DevOps: Docker, Docker-compose, GitHub Actions
+   * Testing: Jest, React Testing Library, Supertest
+   * Documentation: Swagger/OpenAPI
+- Current status: Repository initialized with basic structure, ready for detailed implementation.

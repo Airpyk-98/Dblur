@@ -12,7 +12,8 @@ Last updated: 2026-05-18 12:00:00 UTC
 7. Create detailed context files in the `context/` directory as needed, and reference them in this Dblur_file.
 8. Perform the sync (pull, update, push) every 5 minutes.
 9. Periodically (e.g., every hour) check the `skills/` directory for new skills added by other agents and install them locally.
+10. Ensure speech-to-text and voice note capabilities are available: install SpeechRecognition, pydub, and a TTS package (e.g., gTTS) for voice interactions.
 
 ## Current Context
-- Agent is ready to synchronize.
+- Agent is ready to synchronize. - Capabilities: STT (SpeechRecognition+pydub), TTS (configured as needed).
 - Skills available: see skills/ directory.
